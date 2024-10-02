@@ -11,7 +11,6 @@ export default function Map({location}) {
   const showMarker = (e) => {
     const coords = e.nativeEvent.coordinate
     setMarker((prevMarkers) => [...prevMarkers, coords])
-    //setMarker(coords)
     console.log(coords)
   }
 
@@ -24,7 +23,7 @@ export default function Map({location}) {
         onLongPress={showMarker}
       >
         {
-          // Map through the markers array to display all markers
+          
           marker.map((marker, index) => (
             <Marker 
               key={index}
